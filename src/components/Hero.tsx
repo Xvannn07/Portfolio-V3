@@ -21,7 +21,7 @@ export const Hero = () => {
             <div className="relative group">
               <div className="absolute inset-0 bg-foreground/5 rounded-[2rem] blur-3xl group-hover:bg-foreground/10 transition-colors duration-500" />
               <img
-                src="/images/avatar-p.jpeg"
+                src="/images/avatar.jpeg"
                 alt='avatar'
                 className="relative z-10 w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 object-cover grayscale rounded-[2rem] border-4 border-background"
                 loading="eager"
