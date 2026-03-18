@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 6%;
+    --foreground: 0 0% 93%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 93%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 93%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 6%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 93%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 0 0% 14%;
+    --accent-foreground: 0 0% 93%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 0 0% 100%;
+    --radius: 0.5rem;
+    --surface-glass: 0 0% 100% / 0.05;
+    --surface-glass-hover: 0 0% 100% / 0.1;
+    --surface-border: 0 0% 100% / 0.08;
+    --green-dot: 142 71% 45%;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 93%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 0 0% 6%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 0 0% 93%;
+    --sidebar-border: 0 0% 16%;
+    --sidebar-ring: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-hero {
+    font-size: clamp(4rem, 15vw, 16rem);
+    line-height: 0.85;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+  }
+
+  .surface-glass {
+    background: hsl(var(--surface-glass));
+    border: 1px solid hsl(var(--surface-border));
+    backdrop-filter: blur(12px);
+  }
+
+  .surface-card {
+    background: hsl(var(--card));
+    box-shadow: 0 0 0 1px hsl(var(--surface-border));
+  }
+
+  .surface-card-hover {
+    box-shadow: 0 0 0 1px hsl(var(--surface-glass-hover)), 0 20px 40px -20px rgba(0,0,0,0.5);
+  }
+  .text-gradient {
+    background: linear-gradient(90deg, #f8fafc, #facc15, #34d399);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .flicker-active {
+    filter: brightness(0.6) contrast(1.2);
+    opacity: 0.3;
+    transition: opacity 20ms ease-in-out, filter 20ms ease-in-out;
+  }
+
+  .btn-press:active {
+    transform: scale(0.97);
+  }
+
+  .animate-swipe {
+    animation: swipe-x 0.25s ease-out;
+  }
+
+  @keyframes swipe-x {
+    0% { transform: translateX(-8px) scale(0.98); opacity: 0.6; }
+    50% { transform: translateX(4px) scale(1.02); opacity: 1; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+}
+
+/* Intro animation */
+@keyframes intro-fade-in {
+  from { opacity: 0; transform: scale(0.96) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes intro-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+@keyframes intro-fade-out {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(1.03); }
+}
+
+.animate-intro-in {
+  animation: intro-fade-in 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.animate-intro-pulse {
+  animation: intro-pulse 1.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.animate-intro-out {
+  animation: intro-fade-out 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Ping animation for location dot */
+@keyframes ping-slow {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+.animate-ping-slow {
+  animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Marquee for role text */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 3px;
+}
