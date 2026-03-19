@@ -65,7 +65,7 @@ export const projects = [
       category: "Tooling",
       image: "/projects/project-mikrotik-v2.png?height=200&width=400",
       description: "Script template hotspot Mikrotik yang memungkinkan Anda mengubah UI pada hotspot Mikrotik agar terlihat lebih keren dan modern.",
-      tech: ["Next.js", "MDX", "Vercel", "GraphQL"],
+      tech: ["Node.js", "TailwindCSS", "Mikrotik"],
       github: "https://github.com/Xvannn07/templat-hostpot-mikrotik-v2",
 	  link: null,
     },
