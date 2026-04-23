@@ -13,7 +13,7 @@ export const projects = [
       id: 2,
       title: "Portofolio V2 Website",
       category: "Web Portofolio",
-      image: "/projects/projects-portofolio2.png?height=200&width=400",
+      image: "/projects/project-portofolio2.png?height=200&width=400",
       description: "Website Portofolio Dengan UI Modern dan canggih dengan tema profesional dan bisinis Cocok Untuk Personal diri Anda Jika Anda Seorang Pembisnis Atau Melamar.",
       tech: ["Next.js", "TypeScript", "Tailwind CSS"],
       github: "https://github.com/Xvannn07/Portfolio-v2",
