@@ -7,8 +7,8 @@ export const certificates = [
 		category: "Cyber Security",
 		description:
 			"Sertifikat CCEP (Certified Cybersecurity Educator Professional) adalah sertifikasi yang membuktikan kompetensi dalam mengajarkan dan mengembangkan materi edukasi di bidang keamanan siber. Sertifikasi ini bertujuan untuk mencetak tenaga pendidik yang mampu menyampaikan konsep cybersecurity secara profesional, baik untuk pelatihan teknis, akademis, maupun awareness di industri.",
-		imageUrl: "/certificates/backend-javascript.png",
-		pdfUrl: "/certificates/backend-javascript.pdf",
+		imageUrl: "/certificates/security.png",
+		pdfUrl: "/certificates/security.pdf",
 	},
 	{
 		id: "tab1",
