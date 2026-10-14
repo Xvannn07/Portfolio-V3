@@ -1,5 +1,16 @@
 export const certificates = [
 	{
+		id: "tab0",
+		title: "Certified Cybersecurity Educator Professional (CCEP)",
+		issuer: "Red Team Leaders",
+		date: "14 Oct 2026",
+		category: "Cyber Security",
+		description:
+			"Sertifikat CCEP (Certified Cybersecurity Educator Professional) adalah sertifikasi yang membuktikan kompetensi dalam mengajarkan dan mengembangkan materi edukasi di bidang keamanan siber. Sertifikasi ini bertujuan untuk mencetak tenaga pendidik yang mampu menyampaikan konsep cybersecurity secara profesional, baik untuk pelatihan teknis, akademis, maupun awareness di industri.",
+		imageUrl: "/certificates/backend-javascript.png",
+		pdfUrl: "/certificates/backend-javascript.pdf",
+	},
+	{
 		id: "tab1",
 		title: "Backend Javascript Fundamentals",
 		issuer: "Dicoding Indonesia Academy",
